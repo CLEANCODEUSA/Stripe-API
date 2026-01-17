@@ -1,63 +1,15 @@
-# gitignore template for Drupal 8 projects
-#
-# earlier versions of Drupal are tracked in `community/PHP/`
+# Exclude the directory that contains the project's dependencies
+/vendor/
 
-# Ignore configuration files that may contain sensitive information
-/sites/*/*settings*.php
-/sites/*/*services*.yml
+# Exclude the Composer executable itself, if it is placed in the project root
+composer.phar
 
-# Ignore paths that may contain user-generated content
-/sites/*/files
-/sites/*/public
-/sites/*/private
-/sites/*/files-public
-/sites/*/files-private
+# Commit your application's lock file
+# This ensures that everyone working on the project uses the exact same version of dependencies
+# For more information, see the Composer documentation on commit best practices:
+# https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+!/composer.lock
 
-# Ignore paths that may contain temporary files
-/sites/*/translations
-/sites/*/tmp
-/sites/*/cache
-
-# Ignore testing related files
-/sites/simpletest
-
-# Ignore drupal core (if not versioning drupal sources)
-/core
-/vendor
-/modules/README.txt
-/profiles/README.txt
-/themes/README.txt
-/sites/README.txt
-/sites/example.sites.php
-/sites/example.settings.local.php
-/sites/development.services.yml
-/.csslintrc
-/.editorconfig
-/.eslintignore
-/.eslintrc.json
-/.gitattributes
-/.ht.router.php
-/.htaccess
-/autoload.php
-/example.gitignore
-/index.php
-/INSTALL.txt
-/LICENSE.txt
-/README.txt
-/robots.txt
-/update.php
-/web.config
-
-*/.DS_Store
-.DS_Store
-nbproject/private/private.xml
-nbproject/project.xml
-modules/contrib/.DS_Store
-modules/contrib/.DS_Store
-nbproject/private/private.xml
-drupal892.sql
-modules/custom/.DS_Store
-modules/contrib/.DS_Store
-drupal892-old.sql
-php_errors.log
-.env
+# If you are developing a library, you might choose to ignore the lock file,
+# but for most applications, it should be committed.
+# # composer.lock
