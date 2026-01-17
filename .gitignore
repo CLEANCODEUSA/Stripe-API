@@ -13,3 +13,5 @@ composer.phar
 # If you are developing a library, you might choose to ignore the lock file,
 # but for most applications, it should be committed.
 # # composer.lock
+
+.env
